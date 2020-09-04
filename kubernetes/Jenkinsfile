@@ -22,7 +22,7 @@ podTemplate(label: label, containers: [
 		git credentialsId: '{github-lab08}', url: '{https://github.com/Kwonyoungrok/cicd-front/}', branch: 'master' 
 		}
 		// #2 Properties 파일 읽기		
-		def props = readProperties file:"{파일위치}"
+		def props = readProperties file:"./kubernetes/pipeline.properties"
 		// 재배포를 위한 tag를 재정의
 		def timeStamp = System.currentTimeMillis()
 		echo "TimeStamp: ${timeStamp}"
